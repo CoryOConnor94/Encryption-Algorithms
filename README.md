@@ -74,10 +74,20 @@ Decrypted Message: hello
 The Data Encryption Standard (DES) is a symmetric-key algorithm for encrypting digital data.
 
 #### **File**
-- `des_cipher.py` *(To be implemented)*
+- `des_cipher.py` Implements encryption and decryption
 
 #### **Usage**
-*TBD*
+Run the script and provide a message and key:
+```bash
+python des.py
+```
+Example:
+```
+Enter password to derive key: secretkey
+Enter message to be encrypted: hello
+Encrypted Message: riijm
+Decrypted Message: hello
+```
 
 ---
 
