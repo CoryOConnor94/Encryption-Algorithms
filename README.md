@@ -44,7 +44,16 @@ Example:
 Enter the cipher text to be cracked: khoor
 With 3, the result is: hello
 ```
-
+#### Requirements
+Ensure you have the required dependencies installed:
+```bash
+pip install nltk
+```
+For the first time running `brute_force_caesar.py`, ensure the NLTK word list is downloaded:
+```python
+import nltk
+nltk.download('words')
+```
 ---
 
 ### 2. **Vigenère Cipher**
@@ -101,18 +110,7 @@ The Advanced Encryption Standard (AES) is a widely used symmetric encryption alg
 #### **Usage**
 *TBD*
 
----
 
-## Requirements
-Ensure you have the required dependencies installed:
-```bash
-pip install nltk
-```
-For the first time running `brute_force_caesar.py`, ensure the NLTK word list is downloaded:
-```python
-import nltk
-nltk.download('words')
-```
 
 ---
 
