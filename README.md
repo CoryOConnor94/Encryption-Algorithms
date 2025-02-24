@@ -63,6 +63,7 @@ The Vigenère cipher is a polyalphabetic substitution cipher that uses a keyword
 #### **File**
 - `vigenere_cipher.py`: Implements encryption and decryption.
 
+
 #### **Usage**
 Run the script and provide a message and key:
 ```bash
@@ -78,12 +79,18 @@ Decrypted Message: hello
 
 ---
 
-### 3. **DES Encryption** *(To be implemented)*
+### 3. **DES Encryption**
 #### **Description**
 The Data Encryption Standard (DES) is a symmetric-key algorithm for encrypting digital data.
 
 #### **File**
 - `des_cipher.py` Implements encryption and decryption
+
+#### Requirements
+Ensure you have the required dependencies installed:
+```bash
+pip install pycryptodome
+```
 
 #### **Usage**
 Run the script and provide a message and key:
@@ -100,24 +107,41 @@ Decrypted Message: hello
 
 ---
 
-### 4. **AES Encryption** *(To be implemented)*
+### 4. **AES Encryption**
 #### **Description**
-The Advanced Encryption Standard (AES) is a widely used symmetric encryption algorithm.
+This script provides a secure way to encrypt and decrypt messages using AES-256 in CBC mode.
+Derives a cryptographic key from a user-provided password using PBKDF2 and ensures security with a unique salt and IV for each encryption operation.
 
 #### **File**
-- `aes_cipher.py` *(To be implemented)*
+- `aes.py` Implements encryption and decryption
+
+#### Requirements
+Ensure you have the required dependencies installed:
+```bash
+pip install pycryptodome
+```
 
 #### **Usage**
-*TBD*
+```bash
+python aes_script.py
+```
 
+#### **Example**
+Encryption:
+```bash
+Enter password: mysecurepassword
+Enter message to encrypt: Hello, world!
+```
+Decryption:
+```bash
+Enter password: mysecurepassword
+Decrypted message: Hello, world!
+```
 
-
----
-
-## Notes
-- The brute-force Caesar decryption attempts to filter out meaningful results using an English word list from NLTK.
-- The scripts currently support printable ASCII characters.
-- Additional encryption methods (DES, AES) will be implemented in the future.
+#### **Security Considerations**
+- The script does not store passwords – ensure you remember yours!
+- PBKDF2 with 100,000 iterations provides strong key derivation.
+- Always store the full encrypted output (including salt and IV) to allow successful decryption.
 
 ---
 
