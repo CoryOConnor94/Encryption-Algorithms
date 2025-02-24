@@ -6,21 +6,6 @@ from Crypto.Random import get_random_bytes
 import binascii
 
 
-# Define encryption cipher object with cipher block chaining mode
-# encrypt_cipher = AES.new(key, AES.MODE_CBC, iv)
-
-# plain_text = b'This is the secret'
-
-# Encrypt plain text and add padding to ensure blocks are 16 bytes
-# encrypted_text = encrypt_cipher.encrypt(pad(plain_text, AES.block_size))
-
-# Define decryption cipher
-# decrypt_cipher = AES.new(key, AES.MODE_CBC, iv)
-# decrypted_message = unpad(decrypt_cipher.decrypt(encrypted_text), AES.block_size)
-#
-# print(f'Encrypted message: {encrypted_text}')
-# print(f'Decrypted_message: {decrypted_message}')
-
 def derive_key(password, salt, iterations=100000):
     """Derives a 32-byte (256-bit) key using PBKDF2 with 100000 iterations and 16 byte salt to ensure secure unique key"""
     return PBKDF2(password, salt, dkLen=32, count=iterations)
